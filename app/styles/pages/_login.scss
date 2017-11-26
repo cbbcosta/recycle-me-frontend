@@ -1,0 +1,51 @@
+.login{
+  text-align: center;
+}
+
+.login__title-wrapper {
+  img {
+    width: 45px;
+  }
+}
+
+.login__title {
+  font-family: $main-typeface;
+  color: #5F5D70;
+  font-weight: 200;
+  @include font-size(28);
+  margin-bottom: 95px;
+}
+
+.login__form-input {
+  margin: 2px auto;
+  display: block;
+  height: 64px;
+  width: 315px;
+  border-radius: 2px 2px 0 0;
+  background-color: #FBFAFF;
+  padding-left: 20px;
+  border: none;
+}
+
+.login__text {
+  @include font-size(14);
+  margin-bottom: 14px;
+  color: #9B99A9;
+  font-family: $main-typeface;
+  font-weight: 100;
+}
+
+.login__forgot-psswd-wrapper {
+  margin-top: 150px;
+}
+
+.login__forgot-psswd-link {
+  color: #00CA9D;
+  @include font-size(16);
+  font-weight: 300;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

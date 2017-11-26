@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    $CSSWIZARDRY-GRIDS EXTENSION
+
+    Import after CSSWIZARDRY-GRIDS
+\*------------------------------------*/
+
+
+/**
+ *Generate visibility classes based on screen width
+ */
+$responsive-visibility: true;
+
+
+/**
+ * Control visbility of elements based on grid
+ */
+@mixin visibility-setup($namespace:"") {
+  $prefix: $class-type + $namespace;
+
+  #{$prefix}display {
+    display: inline-block;
+  }
+  #{$prefix}display-block {
+    display: block;
+  }
+  #{$prefix}display-none {
+    display: none;
+  }
+}
+
+/**
+ * Our regular, non-responsive visibility classes.
+ */
+@include visibility-setup();
+
+/**
+ * Our responsive visibility classes, if we have enabled them.
+ */
+@if $responsive-visibility {
+
+    @each $name in $breakpoint-has-widths {
+        @include grid-media-query($name) {
+           @include visibility-setup('#{$name}--');
+        }
+    }
+
+}

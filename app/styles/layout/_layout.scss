@@ -1,0 +1,63 @@
+// *************************************
+//
+//   Layout styles
+//
+// *************************************
+
+// -------------------------------------
+//   Container
+// -------------------------------------
+
+.l-container {
+  position: relative;
+  margin: 0 auto;
+  width: 94%;
+  max-width: 1170px;
+}
+
+.xl--l-container {
+  @include media($break-xl) {
+    position: relative;
+    margin: 0 auto;
+    width: 94%;
+    max-width: 1170px;
+  }
+}
+
+.l-container--narrow {
+  max-width: 600px;
+}
+
+.l-padding-bottom {
+  padding-bottom: 50px;
+  @include media($break-s2) {
+    padding-bottom: 100px;
+  }
+}
+
+.l-padding-top {
+  padding-top: 50px;
+  @include media($break-s2) {
+    padding-top: 100px;
+  }
+}
+
+.l-container--opacity {
+  background: rgba(0, 0, 0, .02)
+}
+
+.l-container-smaller {
+  position: relative;
+  margin: 0 auto;
+  width: 55%;
+  max-width: 1170px;
+}
+
+.small-container-desktop {
+  margin: 0 auto;
+  width: 94%;
+
+    @include media($break-m) {
+        width: 51%;
+    }
+}
